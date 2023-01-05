@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer type="module" src="app.js"></script>
+  <title>Guess My Number!</title>
+</head>
+
+<body>
+  <header>
+    <p class="label-score">Score: <span class="score">--</span></p>
+    <p class="label-highscore">Highscore: <span class="highscore">--</span></p>
+    <h1>Guess My Number!</h1>
+    <p class="label-difficulty">
+      Difficulty: <span class="difficulty">Loading...</span>
+    </p>
+  </header>
+  <main>
+    <section class="input">
+      <input disabled contenteditable type="tel" class="guess" maxlength="0" placeholder="--" />
+      <button disabled class="btn">Disabled</button>
+    </section>
+    <section class="progress">
+      <p class="message">Loading...</p>
+      <p class="label-counter">
+        Guesses Available: <span class="counter">--</span>
+      </p>
+      <p class="label-points">
+        Points Available: <span class="points" id="pointsx">--</span>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p class="attribution">Copyright &copy; 2023 Finnoybu</p>
+  </footer>
+
+</body>
+
+</html>
