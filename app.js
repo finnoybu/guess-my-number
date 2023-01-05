@@ -9,16 +9,6 @@ import {
   messages,
 } from './constants.js';
 
-/* ---------- DEBUG LOGGING ----------*/
-
-const debug = 1;
-
-function logger(message) {
-  if (debug) {
-    console.log(message);
-  }
-}
-
 /* ---------- FUNCTIONS ----------*/
 
 // Set initial state (0)
@@ -178,7 +168,6 @@ selectors.btn.addEventListener('click', () => {
 
       // Generate random number in level range
       vars.number = Math.floor(Math.random() * difficulty.value()) + 1;
-      console.log(vars.number);
 
       // Set active state
       setActiveState();
