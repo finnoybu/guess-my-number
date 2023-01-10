@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 import {
   colors,
@@ -7,7 +7,7 @@ import {
   vars,
   difficulty,
   messages,
-} from './constants.js';
+} from "./constants.js";
 
 /* ---------- FUNCTIONS ----------*/
 
@@ -21,15 +21,15 @@ function setInitialState() {
 
   // Set controls
   selectors.difficulty.style.color = colors.secondary;
-  selectors.difficulty.style.cursor = 'pointer';
+  selectors.difficulty.style.cursor = "pointer";
   selectors.difficulty.textContent = difficulty.text();
 
-  selectors.guess.placeholder = '?';
+  selectors.guess.placeholder = "?";
   selectors.guess.style.background = colors.black;
-  selectors.guess.value = '';
+  selectors.guess.value = "";
 
   selectors.btn.disabled = false;
-  selectors.btn.textContent = 'Start';
+  selectors.btn.textContent = "Start";
 
   displayMessage(0); // Display initial message
 
@@ -43,13 +43,13 @@ function setActiveState() {
   selectors.points.textContent = vars.points;
 
   // Set controls
-  selectors.btn.textContent = 'Guess';
+  selectors.btn.textContent = "Guess";
 
   selectors.difficulty.style.color = colors.primary;
-  selectors.difficulty.style.cursor = '';
+  selectors.difficulty.style.cursor = "";
 
   selectors.guess.disabled = false;
-  selectors.guess.placeholder = '';
+  selectors.guess.placeholder = "";
   selectors.guess.maxLength = difficulty.value().toString().length;
   selectors.guess.focus();
 
@@ -67,7 +67,7 @@ function setEndRoundState() {
   selectors.guess.disabled = true;
   selectors.guess.style.background = colors.green;
 
-  selectors.btn.textContent = 'Continue';
+  selectors.btn.textContent = "Continue";
 
   displayMessage(6); // Display continue message
 
@@ -83,7 +83,7 @@ function setEndGameState() {
   selectors.guess.disabled = true;
   selectors.guess.style.background = colors.red;
 
-  selectors.btn.textContent = 'Retry';
+  selectors.btn.textContent = "Retry";
 
   displayMessage(7); // Display continue message
 
@@ -140,7 +140,7 @@ function play() {
 /* ---------- EVENT LISTENERS ----------*/
 
 // Event listener for difficulty click: Toggle difficulty level
-selectors.difficulty.addEventListener('click', () => {
+selectors.difficulty.addEventListener("click", () => {
   // Check if initial state
   if (vars.state === 0 || vars.state === 2) {
     // Increment level index
@@ -155,7 +155,7 @@ selectors.difficulty.addEventListener('click', () => {
 });
 
 // Event listener for button click: State dependent actions
-selectors.btn.addEventListener('click', () => {
+selectors.btn.addEventListener("click", () => {
   // Check state
   switch (vars.state) {
     // Initial state
@@ -203,22 +203,22 @@ selectors.btn.addEventListener('click', () => {
 });
 
 // Event listener for keydown: Submit guess on 'Enter' key
-selectors.guess.addEventListener('keydown', function (e) {
-  if (e.key === 'Enter') {
+selectors.guess.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
     selectors.guess.blur();
     selectors.btn.click();
   }
 });
 
 // Event listenter for input onfocus: Select existing guess value
-selectors.guess.addEventListener('focus', function () {
+selectors.guess.addEventListener("focus", function () {
   selectors.guess.select();
 });
 
 // Event listener for input value: Correct out of range guesses
-selectors.guess.addEventListener('input', function () {
+selectors.guess.addEventListener("input", function () {
   if (isNaN(selectors.guess.value) || selectors.guess.value < 1) {
-    selectors.guess.value = '';
+    selectors.guess.value = "";
   } else if (selectors.guess.value > difficulty.value()) {
     selectors.guess.value = difficulty.value();
     displayMessage(3);

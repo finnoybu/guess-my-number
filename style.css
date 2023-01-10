@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Silkscreen&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Silkscreen&display=swap");
 
 :root {
-  --font-family: 'Silkscreen', sans-serif;
-  --color-primary: #7d4370;
+  --font-family: "Silkscreen", sans-serif;
+  /* --color-primary: #7d4370; */
+  --color-primary: #935388;
+  /* --color-secondary: #2b6e4c; */
   --color-secondary: #2b6e4c;
   --color-red: #c33;
   --color-green: #3c3;
@@ -39,7 +41,7 @@ body {
   font-family: var(--font-family);
   color: var(--color-primary);
   background: linear-gradient(var(--gradient-dark), var(--gradient-light)),
-    url('https://img.freepik.com/premium-photo/abstract-numbers-dark-green-purple-3d-render-wallpaper-background-technology-illustration_361738-302.jpg?w=2000')
+    url("https://img.freepik.com/premium-photo/abstract-numbers-dark-green-purple-3d-render-wallpaper-background-technology-illustration_361738-302.jpg?w=2000")
       no-repeat center center fixed;
 
   background-size: cover;

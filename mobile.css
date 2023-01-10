@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Silkscreen&display=swap");
+
+:root {
+  --font-family: "Silkscreen", sans-serif;
+  /* --color-primary: #7d4370;  */
+  --color-primary: #a65995;
+  /* --color-secondary: #2b6e4c; */
+  --color-secondary: #5abf8c;
+  --color-red: #c33;
+  --color-green: #3c3;
+  --color-black: #000;
+  --color-darkest: #222;
+  --color-darker: #444;
+  --color-dark: #666;
+  --color-mid: #888;
+  --color-light: #aaa;
+  --color-lighter: #ccc;
+  --color-lightest: #eee;
+  --color-white: #fff;
+  --gradient-dark: #000000ff;
+  --gradient-mid: #00000033;
+  --gradient-light: #00000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  background: linear-gradient(var(--gradient-dark), var(--gradient-light))
+    no-repeat center center fixed;
+  /* background: linear-gradient(var(--gradient-dark), var(--gradient-light)),
+    url("https://img.freepik.com/premium-photo/abstract-numbers-dark-green-purple-3d-render-wallpaper-background-technology-illustration_361738-302.jpg?w=2000")
+      no-repeat center center fixed;
+
+  background-size: cover; */
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 40vh;
+  border-bottom: 10px dotted var(--color-secondary);
+}
